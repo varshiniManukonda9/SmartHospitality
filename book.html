@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyRise Hotel - Booking</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f5fa;
+            color: #555;
+        }
+
+        header {
+            background-color: #7e5aa0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .booking-form {
+            background-color: white;
+            padding: 40px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .booking-form h3 {
+            color: #7e5aa0;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #7e5aa0;
+        }
+
+        .submit-btn {
+            padding: 12px;
+            background-color: #7e5aa0;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #6c4b8e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Hotel Name -->
+    <header>
+        SkyRise Hotel
+    </header>
+
+    <!-- Booking Form -->
+    <div class="booking-form">
+        <h3>Complete Your Booking</h3>
+
+        <form action="confirmation.html" method="POST">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+
+            <!-- Room Type -->
+            <div class="form-group">
+                <label for="room">Room Type</label>
+                <select id="room" name="room" required>
+                    <option value="Single Room">Single Room</option>
+                    <option value="Double Room">Double Room</option>
+                    <option value="Triple Room">Triple Room</option>
+                    <option value="Deluxe Room">Deluxe Room</option>
+                    <option value="Executive Room">Executive Room</option>
+                    <option value="Penthouse">Penthouse</option>
+                    <option value="Family Room">Family Room</option>
+                </select>
+            </div>
+
+            <!-- Number of Members -->
+            <div class="form-group">
+                <label for="members">Number of Members</label>
+                <input type="number" id="members" name="members" required min="1">
+            </div>
+
+            <!-- Number of Days -->
+            <div class="form-group">
+                <label for="days">Number of Days</label>
+                <input type="number" id="days" name="days" required min="1">
+            </div>
+
+            <!-- Date of Arrival -->
+            <div class="form-group">
+                <label for="arrival-date">Date of Arrival</label>
+                <input type="date" id="arrival-date" name="arrival-date" required>
+            </div>
+
+            <!-- Time of Arrival -->
+            <div class="form-group">
+                <label for="arrival-time">Time of Arrival</label>
+                <input type="time" id="arrival-time" name="arrival-time" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Confirm Booking</button>
+        </form>
+    </div>
+
+</body>
+</html>

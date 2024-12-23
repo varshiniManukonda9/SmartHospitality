@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyRise Hotel - Room Availability</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5fa;
+        }
+
+        /* Header Style */
+        header {
+            background-color: #865cb9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Navigation in Header */
+        .header-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-nav a:hover {
+            background-color: #6f4b96;
+        }
+
+        /* FontAwesome Icon Styling */
+        .header-nav a i {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
+        /* Room Listings Section */
+        .room-listings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .room-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            width: 48%;
+            margin-bottom: 20px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .room-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .room-card h4 {
+            color: #865cb9;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .room-card .price {
+            color: #865cb9;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .room-card .availability {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .room-card button {
+            padding: 12px;
+            background-color: #865cb9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .room-card button:hover {
+            background-color: #6f4b96;
+        }
+
+        @media (max-width: 1024px) {
+            .room-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .room-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hotel Header with Navigation -->
+    <header>
+        <div>SkyRise Hotel</div>
+        <div class="header-nav">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="mybooking.html"><i class="fas fa-book"></i>My Bookings</a> <!-- My Bookings with Icon -->
+        </div>
+    </header>
+
+    <!-- Room Listings -->
+    <div class="room-listings">
+        <!-- Single Room -->
+        <div class="room-card">
+            <img src="/images/singleroom.jpg" alt="Single Room">
+            <h4>Single Room</h4>
+            <p>A cozy room for solo travelers with all essential amenities.</p>
+            <p class="price">₹7,500/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Single Room&price=7500&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Double Room -->
+        <div class="room-card">
+            <img src="/images/doubleroom.jpg" alt="Double Room">
+            <h4>Double Room</h4>
+            <p>A comfortable room perfect for families or groups.</p>
+            <p class="price">₹10,500/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Double Room&price=10500&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Triple Room -->
+        <div class="room-card">
+            <img src="/images/threeroom.jpg" alt="Triple Room">
+            <h4>Triple Room</h4>
+            <p>Perfect for small groups or families, offering more space and comfort.</p>
+            <p class="price">₹12,000/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Triple Room&price=12000&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Deluxe Room -->
+        <div class="room-card">
+            <img src="/images/delux.jpg" alt="Deluxe Room">
+            <h4>Deluxe Room</h4>
+            <p>A luxurious room with premium amenities for an unforgettable stay.</p>
+            <p class="price">₹18,000/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Deluxe Room&price=18000&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Standard Room -->
+        <div class="room-card">
+            <img src="/images/standard.jpg" alt="Standard Room">
+            <h4>Standard Room</h4>
+            <p>A simple, comfortable room for a relaxed stay.</p>
+            <p class="price">₹8,000/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Standard Room&price=8000&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Executive Room -->
+        <div class="room-card">
+            <img src="/images/executive.jpg" alt="Executive Room">
+            <h4>Executive Room</h4>
+            <p>Ideal for business travelers with all essential amenities and more.</p>
+            <p class="price">₹15,000/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Executive Room&price=15000&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Penthouse -->
+        <div class="room-card">
+            <img src="/images/penthouse.jpg" alt="Penthouse">
+            <h4>Penthouse</h4>
+            <p>Exclusive luxury with breathtaking views and a private space.</p>
+            <p class="price">₹40,000/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Penthouse&price=40000&status=Pending'">Book Now</button>
+        </div>
+
+        <!-- Family Room -->
+        <div class="room-card">
+            <img src="/images/family.jpg" alt="Family Room">
+            <h4>Family Room</h4>
+            <p>Perfect for large families with multiple beds and ample space.</p>
+            <p class="price">₹22,000/night</p>
+            <p class="availability">Availability: Available</p>
+            <button onclick="window.location.href='mybooking.html?room=Family Room&price=22000&status=Pending'">Book Now</button>
+        </div>
+    </div>
+
+</body>
+</html>
